@@ -47,3 +47,7 @@ jobs:
             
             # Memuat ulang Nginx untuk menerapkan perubahan (jika ada)
             sudo systemctl reload nginx
+            
+            # TAMBAHKAN BARIS INI: Restart PHP-FPM untuk membersihkan cache
+            # Ganti 'php8.1-fpm' jika Anda menggunakan versi PHP yang berbeda
+            sudo systemctl restart php8.1-fpm
